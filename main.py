@@ -16,6 +16,7 @@ class1Data = { '15122-Lecture1': '08:35AM to 09:55AM', # (1080, 1100)
 class2Data = { '21127-Lecture1': '09:05AM to 09:55AM', # (1080, 1100)
                '21127-Lecture2': '11:15AM to 12:05PM'
              }
+
 # answer should be ['15122-Lecture1': '08:35AM to 09:55AM' 
 #                   '21127-Lecture2': '11:15AM to 12:05PM']
 
@@ -27,29 +28,35 @@ result = []
 def stuff(allClassData):
     final = []
     for classData in allClassData:
-        final += backtracker(classData, result)
+        #print(classData, final)
+        final += bestClassAndTime(classData, result)
     return final
 
 # cmu 112 course notes website
 # classData is a dictionary. 
-def backtracker(classData, result):
+def bestClassAndTime(classData, result):
     # we are trying to build result up. 
-    if len(result) == 2:
-        return result
-        # now the graphics does it thing
-    else:
-        for key in classData:
-            print(f'Key: {key}')
-            value = classData[key]
-            miniTuple = (key, value)
-            result.append(miniTuple)
-            if noTimeConflicts(result):
-                solution = backtracker(allClassData, result)
-                if solution != None:
-                    return solution
-                # backtracking: remove it from result. 
-                result.remove(miniTuple)
-        return None
+    # if len(result) == 1:
+    #     return result
+    #     # now the graphics does it thing
+    # else:
+    for key in classData:
+        #print(f'Key: {key}, result = {result}')
+        value = classData[key]
+        miniTuple = (key, value)
+        result.append(miniTuple)
+        
+        if noTimeConflicts(result):
+            # solution = bestClassAndTime(classData, result)
+            # if solution != None:
+            #     return solution
+            # # backtracking: remove it from result. 
+            # result.remove(miniTuple)
+            # classData.add(key)
+            print(f'key = {key}')
+            print(f'result = {result}')
+            return result
+    return 'None'
 
 # L = [ (key, classData[key]) , (key, classData[key]) ]
 def noTimeConflicts(L):
