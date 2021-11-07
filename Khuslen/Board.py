@@ -1,5 +1,5 @@
 from cmu_112_graphics import *
-import random
+import random 
 
 # d[15112] = {Lec: , Rec:}
 # d[15112][Lec] = {times: , day: }
