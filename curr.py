@@ -1,28 +1,48 @@
-class1Data = { '36202-Lecture1': '04:40PM to 05:30PM'}
-#class1DataRecitation = { '36202-Recit': '04:40PM to 05:30PM'}
+# 15122
+class1Lecture = { 'Lec 1': [515, 595], 
+                  'Lec 2': [610, 690]
+                }
 
-class2Data = { '15122-Lecture1': '08:35AM to 09:55AM', 
-               '15122-Lecture2': '10:10AM to 11:30AM'
-             }
+class1Recitation = {'A': [545, 595], 
+                    'B': [610, 660], 
+                    'C': [675, 1445], 
+                    'D': [1460, 790], 
+                    'E': [805, 855], 
+                    'F': [870, 920], 
+                    'G': [935, 985], 
+                    'H': [1000, 1050], 
+                    'I': [545, 595], 
+                    'J': [610, 660], 
+                    'K': [675, 1445], 
+                    'L': [1460, 790], 
+                    'M': [805, 855], 
+                    'N': [870, 920], 
+                    'O': [935, 985], 
+                    'P': [1000, 1050]
+                    }
 
-#class2DataRecitation
+class2Lecture = { 'Lec 1': [545, 595], 
+                  'Lec 2': [675, 1445], 
+                  'Lec 3': [870, 920]
+                }
 
-class3Data = { '21127-Lecture1': '09:05AM to 09:55AM', 
-               '21127-Lecture2': '11:15AM to 12:05PM'
-             }
+class2Recitation = {'A': [545, 595], 
+                    'B': [610, 660], 
+                    'C': [1460, 790], # 24:20 - 13:10 
+                    'D': [870, 920], 
+                    'E': [610, 660], 
+                    'F': [1460, 790], 
+                    'G': [805, 855], 
+                    'H': [935, 985], 
+                    'I': [1460, 790], 
+                    'J': [805, 855], 
+                    'K': [870, 920], 
+                    'L': [935, 985]
+                    }
 
-# NOTES:
-    # this program only works for some reason when we have class1Data, 
-    # class2Data, class3Data go in order from lowest number of elements to 
-    # highest. 
-    # see how class1Data has 1 element and class2Data has 2: if we had it 
-    # switched (class1Data has 2 elements and class2Data has 1), then the 
-    # program doesn't work properly. :/
+# we want: [ ('Lec 1', [515, 595]), ('B', [610, 660]), 
+#            ('Lec 2', [675, 1445]), ]
 
-    # I didn't take AM and PM time into consideration yet. 
-
-# we want: [(15122-Lecture1', '08:35AM to 09:55AM'), (21127-Lecture2, '11:15AM to 12:05PM')] 
-# since [(15122-Lecture1', '08:35AM to 09:55AM'), (21127-Lecture1, '09:05AM to 09:55AM')] has time conflict
 
 def bestClassAndTime(allClassData, result, index = 0):
     if index >= len(allClassData):
