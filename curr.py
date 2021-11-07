@@ -144,6 +144,9 @@ def isLegalTime(dayResult):
                    return False
     return True
 
+print(main(dayClasses))
+
+
 # # allClassData = {'Lec 1': [545, 595], 'Lec 2': [675, 725], 'Lec 3': [870, 920]}
 # # result = [ ('Lec 1', [545, 595]) ]
 # def bestClassAndTime(allClassData, result, index = 0):
@@ -168,6 +171,3 @@ def isLegalTime(dayResult):
 #                 # backtracking: remove it from result. 
 #                 result.remove(miniTuple)
 #         return 'None'
-
-
-print(main(dayClasses))
