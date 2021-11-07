@@ -8,26 +8,27 @@ import random
 # d[15112][Lec][times] = (1245, 1305)
 
 #canvas.create_text(app.width/2, app.height/2, fill=app.color, text=app.label, font=f'Arial {s} bold')
-'''
-d = { 15112: {'lec':
+
+d = { 
+        15112: {'lec':
                     {'Lec 1':[690, 810]},
                    'days': ['M','W','F'] },
               'sec':
                   {'time':
                        {'A': [750, 810]},
                    'days' : ['T','TR']},
-              'title':'Fundemantels of Programming'},
-      21127: {'lec':
-                  {'time':
-                       {'Lec 2': [1050, 1140]},
-                   'days': ['T','TR','S']},
-              'sec':
-                  {'time':
-                       {'B': [480, 540]},
-                   'days': ['M','F']},
-              'title': 'Concepts of Mathematics'}
-      }
-'''
+              'title':'Fundemantels of Programming'}
+        # 21127: {'lec':
+        #             {'time':
+        #                 {'Lec 2': [1050, 1140]},
+        #             'days': ['T','TR','S']},
+        #         'sec':
+        #             {'time':
+        #                 {'B': [480, 540]},
+        #             'days': ['M','F']},
+        #         'title': 'Concepts of Mathematics'}
+    }
+
 #d is the dictionary of classes
 
 def appStarted(app):
